@@ -1,4 +1,4 @@
-# hbase-standalone
+# hbase-standalone [![Docker Pulls](https://img.shields.io/docker/pulls/pierrezemb/hbase-standalone.svg?style=plastic)](https://hub.docker.com/r/pierrezemb/hbase-standalone/) [![Docker Build](https://img.shields.io/docker/build/pierrezemb/hbase-standalone.svg?style=plastic)](https://hub.docker.com/r/pierrezemb/hbase-standalone/)
 Docker images to experiment with HBase 1.4.1 and 2.0
 
 ## Usage
@@ -11,11 +11,11 @@ docker run -it \
         -p 16010:16010 \
         -p 16020:16020 \
         -p 16030:16030 \
-      pierrezemb/hbase-standalone:hbase-2.0.0-beta-1
+      pierrezemb/hbase-standalone:2.0.0-beta-1
 ```
 
 #### HBase Master server interface
-http://hbase:16010/master-status
+http://localhost:16010/master-status
 
 #### Verifying HBase REST interface
 ```
