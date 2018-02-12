@@ -1,18 +1,18 @@
 FROM openjdk:8
 
 RUN apt-get update
-RUN apt-get -y install supervisor python-pip
+RUN apt-get -y install supervisor python-pip net-tools vim
 RUN pip install supervisor-stdout
 RUN mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-ENV VERSION 1.4.1
+ENV VERSION 1.3.1
 ENV DESTINATION /opt/hbase
 
 ADD http://archive.apache.org/dist/hbase/${VERSION}/hbase-${VERSION}-bin.tar.gz /
-RUN tar -xvf hbase-${VERSION}-bin.tar.gz 
+RUN tar -xvf hbase-${VERSION}-bin.tar.gz
 RUN mv /hbase-${VERSION} ${DESTINATION}
-ADD hbase-site.xml /${DESTINATION}/etc
+ADD hbase-site.xml /${DESTINATION}/conf/hbase-site.xml
 
 # Folder for data
 RUN mkdir -p /data/hbase
@@ -27,7 +27,7 @@ EXPOSE 8080
 EXPOSE 9090
 
 # Zookeeper port
-EXPOSE 2181 
+EXPOSE 2181
 
 # Master port
 EXPOSE 16000

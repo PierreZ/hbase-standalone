@@ -1,5 +1,9 @@
 # hbase-standalone [![Docker Pulls](https://img.shields.io/docker/pulls/pierrezemb/hbase-standalone.svg?style=plastic)](https://hub.docker.com/r/pierrezemb/hbase-standalone/) [![Docker Build](https://img.shields.io/docker/build/pierrezemb/hbase-standalone.svg?style=plastic)](https://hub.docker.com/r/pierrezemb/hbase-standalone/)
-Docker images to experiment with HBase 1.4.1 and 2.0
+Docker images to experiment with HBase 1.3.1 and 2.0
+
+## Why not 1.4.X ?
+
+Standalone mode for 1.4.X is setting port in random...
 
 ## Usage
 ```
@@ -34,8 +38,8 @@ http://localhost:16010/master-status
 user@host:/opt# hbase shell
 ```
 
-## Build it 
+## Build it
 
 ```
-docker build -t pierrezemb/hbase-standalone:hbase-2.0.0-beta-1 .
+docker build -t pierrezemb/hbase-standalone:2.0.0-beta-1 .
 ```

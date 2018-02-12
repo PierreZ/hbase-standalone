@@ -12,7 +12,7 @@ ENV DESTINATION /opt/hbase
 ADD http://archive.apache.org/dist/hbase/${VERSION}/${VERSION}-bin.tar.gz /
 RUN tar -xvf ${VERSION}-bin.tar.gz 
 RUN mv /${VERSION} ${DESTINATION}
-ADD hbase-site.xml /${DESTINATION}/etc
+ADD hbase-site.xml /${DESTINATION}/conf/hbase-site.xml
 
 # Folder for data
 RUN mkdir -p /data/hbase
