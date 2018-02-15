@@ -7,5 +7,13 @@
     <name>hbase.zookeeper.property.dataDir</name>
     <value>/data2/zookeeper</value>
   </property>
+     <property>
+     <name>hbase.zookeeper.quorum</name>
+     <value>zookeeper</value>
+   </property>
+   <property>
+     <name>hbase.zookeeper.property.ClientPort</name>
+     <value>2181</value>
+   </property>
 
 </configuration>

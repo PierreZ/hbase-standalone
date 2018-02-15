@@ -21,6 +21,10 @@ RUN mkdir -p /data/zookeeper
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 ENV PATH $PATH:/${DESTINATION}/bin
 
+# Getting web-for-it
+RUN wget https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh -O /wait-for-it.sh
+RUN chmod +x /wait-for-it.sh
+
 # REST API
 EXPOSE 8080
 # Thrift API
